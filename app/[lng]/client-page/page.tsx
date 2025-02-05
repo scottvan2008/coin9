@@ -4,7 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import { useTranslation } from '../../i18n/client'
 import { Header } from '../components/Header'
-import { Footer } from '../components/Footer/client'
+import { LanguageSwitcher } from '../components/LanguageSwitcher/client'
 import { useState } from 'react'
 
 export default function Page({ params }: {
@@ -31,7 +31,7 @@ export default function Page({ params }: {
           </button>
         </Link>
       </main>
-      <Footer lng={lng} path="/client-page" />
+      <LanguageSwitcher lng={lng} path="/client-page" />
     </>
   )
 }

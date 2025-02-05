@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { Trans } from 'react-i18next/TransWithoutContext'
 import { languages } from '../../../i18n/settings'
 
-export const FooterBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, path?: string }) => {
+export const LanguageBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, path?: string }) => {
   const t = i18n.getFixedT(lng, 'footer')
   return (
-    <footer className="bg-gray-800 text-white py-4 px-6">
+    <div className="bg-gray-800 text-white py-4 px-6">
       <Trans i18nKey="languageSwitcher" t={t}>
         {/* @ts-expect-error Trans interpolation */}
         Switch from <strong className="font-semibold">{{lng}}</strong> to:{' '}
@@ -24,6 +24,6 @@ export const FooterBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, 
             </Link>
           ))}
       </div>
-    </footer>
+    </div>
   )
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useTranslation } from '../../i18n'
 import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
+import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
@@ -21,7 +21,7 @@ export default async function Page({ params }: {
           </button>
         </Link>
       </main>
-      <Footer lng={lng} path="/second-page" />
+      <LanguageSwitcher lng={lng} path="/second-page" />
     </>
   )
 }

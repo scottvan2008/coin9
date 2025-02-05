@@ -4,7 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import { useTranslation } from '../../i18n/client'
 import { Header } from '../components/Header'
-import { Footer } from '../components/Footer/client'
+import { LanguageSwitcher } from '../components/LanguageSwitcher/client'
 
 export default function Page({ params }: {
   params: Promise<{ lng: string; }>;
@@ -21,7 +21,7 @@ export default function Page({ params }: {
           </button>
         </Link>
       </main>
-      <Footer lng={lng} path="/second-client-page" />
+      <LanguageSwitcher lng={lng} path="/second-client-page" />
     </>
   )
 }
