@@ -14,7 +14,7 @@ export const FooterBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, 
       <div className="inline-flex gap-2">
         {languages
           .filter((l) => lng !== l)
-          .map((l, index) => (
+          .map((l) => (
             <Link
               key={l}
               href={`/${l}${path}`}
