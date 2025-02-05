@@ -3,7 +3,6 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { useTranslation } from '../../i18n/client'
-import { Header } from '../components/Header'
 import { LanguageSwitcher } from '../components/LanguageSwitcher/client'
 import { useState } from 'react'
 
@@ -16,7 +15,6 @@ export default function Page({ params }: {
   return (
     <>
       <main>
-        <Header heading={t('h1')} />
         <p>{t('counter', { count: counter })}</p>
         <div>
           <button onClick={() => setCounter(Math.max(0, counter - 1))}>-</button>

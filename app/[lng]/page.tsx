@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Trans } from 'react-i18next/TransWithoutContext'
 import { languages, fallbackLng } from '../i18n/settings'
 import { useTranslation } from '../i18n'
-import { Header } from './components/Header'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 import Image from 'next/image'
 
@@ -17,7 +16,6 @@ export default async function Page({ params }: {
   return (
     <>
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
-        <Header heading={t('h1')} />
 
         <LanguageSwitcher lng={lng}/>
 
