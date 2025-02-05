@@ -8,7 +8,7 @@ export function LanguageSwitcher({ lng, path }: {
   lng: string;
   path: string;
 }) {
-  const { i18n } = useTranslation(lng, 'footer')
+  const { i18n } = useTranslation(lng, 'LanguageSwitcher')
   return <LanguageBase i18n={i18n} lng={lng} path={path} />
 }
 
@@ -17,6 +17,6 @@ export function LanguageSwitcher({ lng, path }: {
 //   path: string;
 // }) {
 //   const params = useParams<{ lng: string; }>()
-//   const { i18n } = useTranslation(params.lng, 'footer')
+//   const { i18n } = useTranslation(params.lng, 'LanguageSwitcher')
 //   return <LanguageBase i18n={i18n} lng={params.lng} path={path} />
 // }

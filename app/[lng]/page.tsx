@@ -4,6 +4,7 @@ import { languages, fallbackLng } from '../i18n/settings'
 import { useTranslation } from '../i18n'
 import Image from 'next/image'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
@@ -64,6 +65,7 @@ export default async function Page({ params }: {
           </Link>
         </div>
       </main>
+      <Footer />
       
     </>
   )

@@ -4,7 +4,7 @@
 // import { languages, languageNames } from '../../../i18n/settings';
 
 // export const LanguageBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, path?: string }) => {
-//   const t = i18n.getFixedT(lng, 'footer');
+//   const t = i18n.getFixedT(lng, 'LanguageSwitcher');
 //   return (
 //     <div className="bg-gray-800 text-white py-4 px-6">
 //       <Trans i18nKey="languageSwitcher" t={t}>
