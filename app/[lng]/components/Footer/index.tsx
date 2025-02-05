@@ -3,9 +3,15 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from '../../../i18n';
 import { FooterBase } from './FooterBase';
+import { i18n as I18NextInstance } from 'i18next';
+
 
 export const Footer = ({ lng, path }: { lng: string; path?: string }) => {
-  const [i18n, setI18n] = useState<any>(null); // State to store i18n data
+  // const [i18n, setI18n] = useState<any>(null); // State to store i18n data
+  const [i18n, setI18n] = useState<I18NextInstance | null>(null);
+
+  
+  
 
   useEffect(() => {
     const fetchTranslation = async () => {
