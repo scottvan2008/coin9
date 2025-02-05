@@ -4,6 +4,7 @@ import { languages, fallbackLng } from '../i18n/settings'
 import { useTranslation } from '../i18n'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 import Image from 'next/image'
+import Header from './components/Header'
 
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
@@ -15,9 +16,12 @@ export default async function Page({ params }: {
 
   return (
     <>
+
+<Header lng={lng} />
+
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
 
-        <LanguageSwitcher lng={lng}/>
+      
 
         <Image
           className="dark:invert"
