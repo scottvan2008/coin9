@@ -10,7 +10,7 @@ const initI18next = async (lng: string, ns: string | string[]) => {
   await i18nInstance
     .use(initReactI18next)
     .use(resourcesToBackend((language: string, namespace: string) => import(`./locales/${language}/${namespace}.json`)))
-    .init(getOptions(lng, ns))
+    .init(getOptions(lng, Array.isArray(ns) ? ns[0] : ns)) // Use the first namespace if ns is an array
   return i18nInstance
 }
 
