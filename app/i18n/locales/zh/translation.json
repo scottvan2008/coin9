@@ -1,0 +1,11 @@
+{
+  "h1": "一个简单的示例",
+  "title": "首页",
+  "to-client-page": "前往客户端页面",
+  "to-second-page": "前往第二个页面",
+  "welcome": "欢迎使用 Next.js 13/14/15 <1>新应用目录功能</1> 和 i18next",
+  "blog": {
+    "text": "查看描述此示例的相应 <1>博客文章</1>。",
+    "link": "https://locize.com/blog/next-app-dir-i18n/"
+  }
+}
