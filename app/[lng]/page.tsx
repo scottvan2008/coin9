@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Trans } from 'react-i18next/TransWithoutContext'
 import { languages, fallbackLng } from '../i18n/settings'
 import { useTranslation } from '../i18n'
-import { LanguageSwitcher } from './components/LanguageSwitcher'
 import Image from 'next/image'
 import Header from './components/Header'
 
