@@ -34,7 +34,7 @@ import { i18n } from 'i18next';
 import Link from 'next/link';
 import { languages, languageNames } from '../../../i18n/settings';
 
-export const LanguageBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, path?: string }) => {
+export const LanguageBase = ({ lng, path = '' }: { i18n: i18n, lng: string, path?: string }) => {
   return (
     <div className="bg-gray-800 text-white py-4 px-6">
       <div className="inline-flex gap-2">
