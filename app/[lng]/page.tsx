@@ -19,6 +19,8 @@ export default async function Page({ params }: {
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
         <Header heading={t('h1')} />
 
+        <LanguageSwitcher lng={lng}/>
+
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -61,7 +63,7 @@ export default async function Page({ params }: {
           </Link>
         </div>
       </main>
-      <LanguageSwitcher lng={lng}/>
+      
     </>
   )
 }

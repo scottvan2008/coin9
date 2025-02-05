@@ -1,20 +1,23 @@
-export const fallbackLng = 'en'
-export const languages = [fallbackLng, 'zh', 'pt']
-export const defaultNS = 'translation'
-export const cookieName = 'i18next'
+// i18n/settings.js or any appropriate file
+export const fallbackLng = 'en';
+export const languages = [fallbackLng, 'zh', 'pt'];
+export const defaultNS = 'translation';
+export const cookieName = 'i18next';
 
-export function getOptions (lng = fallbackLng, ns: string | string[] = defaultNS) {
+// Mapping of language codes to their display names
+export const languageNames: { [key: string]: string } = {
+  en: 'English',
+  zh: '中文',
+  pt: 'Português',
+};
+
+export function getOptions(lng = fallbackLng, ns = defaultNS) {
   return {
-    // debug: true,
     supportedLngs: languages,
-    // preload: languages,
     fallbackLng,
     lng,
     fallbackNS: defaultNS,
     defaultNS,
     ns,
-    // backend: {
-    //   projectId: '01b2e5e8-6243-47d1-b36f-963dbb8bcae3'
-    // }
-  }
+  };
 }

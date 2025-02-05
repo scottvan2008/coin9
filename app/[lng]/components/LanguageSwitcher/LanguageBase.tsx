@@ -1,10 +1,10 @@
-import { i18n } from 'i18next'
-import Link from 'next/link'
-import { Trans } from 'react-i18next/TransWithoutContext'
-import { languages } from '../../../i18n/settings'
+import { i18n } from 'i18next';
+import Link from 'next/link';
+import { Trans } from 'react-i18next/TransWithoutContext';
+import { languages, languageNames } from '../../../i18n/settings';
 
 export const LanguageBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string, path?: string }) => {
-  const t = i18n.getFixedT(lng, 'footer')
+  const t = i18n.getFixedT(lng, 'footer');
   return (
     <div className="bg-gray-800 text-white py-4 px-6">
       <Trans i18nKey="languageSwitcher" t={t}>
@@ -20,10 +20,10 @@ export const LanguageBase = ({ i18n, lng, path = '' }: { i18n: i18n, lng: string
               href={`/${l}${path}`}
               className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md transition-colors duration-200"
             >
-              {l}
+              {languageNames[l] || l} {/* Display the language name if available, otherwise fallback to the code */}
             </Link>
           ))}
       </div>
     </div>
-  )
-}
+  );
+};
