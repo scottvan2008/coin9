@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "accept-language": "^3.0.20",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.2",
     "i18next-resources-to-backend": "^1.2.1",
