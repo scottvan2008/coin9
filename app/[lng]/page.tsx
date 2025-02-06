@@ -6,13 +6,9 @@ import { useTranslation } from '../i18n'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { CountdownTimer } from './components/CountdownTimer'
-import { calculateTimeLeft } from "./utils/calculateTimeLeft"
 import { InfoSection } from "./components/InfoSection"
 import { BitcoinStats } from "./components/BitcoinStats"
 
-
-const targetDate = new Date("2028-04-14T08:59:10Z")
-const initialTimeLeft = calculateTimeLeft(targetDate)
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
 }) {
@@ -23,28 +19,13 @@ export default async function Page({ params }: {
 
   return (
     <>
-
-<Header lng={lng} />
-
+      <Header lng={lng} />
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
-
-
-
-
-      <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Welcome to Bitcoin Block Reward Halving Countdown</h1>
-        <CountdownTimer initialTimeLeft={initialTimeLeft} />
-      </div>
-
-
-      <InfoSection />
-      <BitcoinStats />
-      
-
- 
-
-       
-       
+        <div className="text-center mb-12">
+          <CountdownTimer />
+        </div>
+        <InfoSection />
+        <BitcoinStats />
         <hr className="my-5 w-11/12 border-t border-gray-300" />
         <div className="flex space-x-4">
           <Link href={`/${lng}/second-page`}>
@@ -60,7 +41,6 @@ export default async function Page({ params }: {
         </div>
       </main>
       <Footer />
-      
     </>
   )
 }

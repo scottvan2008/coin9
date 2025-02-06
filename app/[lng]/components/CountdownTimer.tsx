@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react"
 import { calculateTimeLeft } from "../utils/calculateTimeLeft"
 
-const targetDate = new Date("2028-04-14T08:59:10Z")
-
-export function CountdownTimer({ initialTimeLeft }: { initialTimeLeft: ReturnType<typeof calculateTimeLeft> }) {
+export function CountdownTimer() {
+  const targetDate = new Date("2028-04-14T08:59:10Z")
+  const initialTimeLeft = calculateTimeLeft(targetDate)
   const [timeLeft, setTimeLeft] = useState(initialTimeLeft)
 
   useEffect(() => {
@@ -19,6 +19,7 @@ export function CountdownTimer({ initialTimeLeft }: { initialTimeLeft: ReturnTyp
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto p-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Welcome to Bitcoin Block Reward Halving Countdown</h1>
         {Object.entries(timeLeft).map(([unit, value]) => (
           <div
             key={unit}
@@ -37,4 +38,3 @@ export function CountdownTimer({ initialTimeLeft }: { initialTimeLeft: ReturnTyp
     </div>
   )
 }
-
