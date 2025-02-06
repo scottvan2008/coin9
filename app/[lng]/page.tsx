@@ -5,6 +5,8 @@ import { useTranslation } from '../i18n'
 import Image from 'next/image'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { CountdownFlipper } from './components/countdown-flipper'
+import CountdownClock from "./components/CountdownClock"
 
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
@@ -20,6 +22,13 @@ export default async function Page({ params }: {
 <Header lng={lng} />
 
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
+
+
+
+
+<CountdownClock />
+
+
 
       
 
