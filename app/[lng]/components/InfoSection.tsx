@@ -1,12 +1,12 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export function InfoSection() {
   return (
-    <section className="prose  mb-12 max-w-7xl mx-auto">
+    <section className="prose mb-12 max-w-7xl mx-auto">
       <h2 className="text-2xl font-bold text-gray-900 mb-4">What is a block halving event?</h2>
       <p className="text-gray-700">
-        As part of Bitcoin's coin issuance, miners are rewarded a certain amount of bitcoins whenever a block is
+        As part of Bitcoin&apos;s coin issuance, miners are rewarded a certain amount of bitcoins whenever a block is
         produced (approximately every 10 minutes). When Bitcoin first started, 50 Bitcoins per block were given as a
         reward to miners. After every 210,000 blocks are mined (approximately every 4 years), the block reward halves
         and will keep on halving until the block reward per block becomes 0 (approximately by year 2140). As of now, the
@@ -20,13 +20,13 @@ export function InfoSection() {
         increases over time, Bitcoin can be used as a hedge against inflation as the price, guided by price equilibrium
         is bound to increase. On the flip side, fiat currencies (like the US dollar), inflate over time as its monetary
         supply increases, leading to a decrease in purchasing power. This is known as monetary debasement by inflation.
-        A simple example would be to compare housing prices decades ago to now and you'll notice that they've increased
+        A simple example would be to compare housing prices decades ago to now and you&apos;ll notice that they&apos;ve increased
         over time!
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Predictable monetary supply</h2>
       <p className="text-gray-700">
-        Since we know Bitcoin's issuance over time, people can rely on programmed/controlled supply. This is helpful to
+        Since we know Bitcoin&apos;s issuance over time, people can rely on programmed/controlled supply. This is helpful to
         understand what the current inflation rate of Bitcoin is, what the future inflation rate will be at a specific
         point in time, how many Bitcoins are in circulation and how many remain left to be mined.
       </p>
@@ -99,7 +99,7 @@ export function InfoSection() {
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Past halving price performance</h2>
       <p className="text-gray-700">
         It is always a debate on what Bitcoin will do in terms of pricing for a halving event. Some people believe that
-        the halving is already priced in by the market and thus there's no expectation for the price to do anything.
+        the halving is already priced in by the market and thus there&apos;s no expectation for the price to do anything.
         Others believe that due to price equilibrium, a halving of supply should cause an increase in price if demand
         for Bitcoins is equal or greater than what it was before the halving event. Below is a chart showing past price
         performance of the last four halving events:
@@ -115,6 +115,5 @@ export function InfoSection() {
         />
       </div>
     </section>
-  )
+  );
 }
-
