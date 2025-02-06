@@ -5,8 +5,12 @@ import { useTranslation } from '../i18n'
 import Image from 'next/image'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import CountdownClock from "./components/CountdownClock"
+import { CountdownTimer } from './components/CountdownTimer'
+import { calculateTimeLeft } from "./utils/calculateTimeLeft"
 
+
+const targetDate = new Date("2028-04-14T08:59:10Z")
+const initialTimeLeft = calculateTimeLeft(targetDate)
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
 }) {
@@ -25,7 +29,10 @@ export default async function Page({ params }: {
 
 
 
-<CountdownClock />
+      <div className="text-center mb-12">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Welcome to Bitcoin Block Reward Halving Countdown</h1>
+        <CountdownTimer initialTimeLeft={initialTimeLeft} />
+      </div>
 
 
 
