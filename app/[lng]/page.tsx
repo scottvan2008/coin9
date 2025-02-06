@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { CountdownTimer } from './components/CountdownTimer'
 import { InfoSection } from "./components/InfoSection"
 import { BitcoinStats } from "./components/BitcoinStats"
+import MultiLanguageComponent from './components/MultiLanguageComponent'
 
 export default async function Page({ params }: {
   params: Promise<{ lng: string; }>;
@@ -22,6 +23,10 @@ export default async function Page({ params }: {
       <Header lng={lng} />
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
         <div className="text-center mb-12">
+
+        <MultiLanguageComponent lng={lng} />
+
+
           <CountdownTimer />
         </div>
         <InfoSection />

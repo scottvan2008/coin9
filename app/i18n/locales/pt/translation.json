@@ -1,5 +1,5 @@
 {
-  "h1": "Ein einfaches Beispiel",
+  "sample": "Ein einfaches Beispiel",
   "title": "Hauptseite",
   "to-client-page": "Zur client seitigen Seite",
   "to-second-page": "Zur zweiten Seite",
