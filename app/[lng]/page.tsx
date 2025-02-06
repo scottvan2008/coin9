@@ -7,6 +7,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import { CountdownTimer } from './components/CountdownTimer'
 import { calculateTimeLeft } from "./utils/calculateTimeLeft"
+import { InfoSection } from "./components/InfoSection"
+import { BitcoinStats } from "./components/BitcoinStats"
 
 
 const targetDate = new Date("2028-04-14T08:59:10Z")
@@ -35,37 +37,14 @@ export default async function Page({ params }: {
       </div>
 
 
-
+      <InfoSection />
+      <BitcoinStats />
       
 
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
+ 
 
-        <h2 className="text-2xl font-bold mt-4 text-center">
-          <Trans t={t} i18nKey="welcome">
-            Welcome to Next.js v13 <small className="text-sm">appDir</small> and i18next
-          </Trans>
-        </h2>
-        <div className="w-full mt-6">
-          <p className="text-center">
-            <Trans t={t} i18nKey="blog.text">
-              Check out the corresponding <a href={t('blog.link')} className="text-blue-500 hover:underline">blog post</a> describing this example.
-            </Trans>
-          </p>
-          <a href={t('blog.link')} className="flex justify-center mt-4">
-            <img
-              className="w-1/2"
-              alt="next 13 blog post"
-              src="https://locize.com/blog/next-app-dir-i18n/next-app-dir-i18n.jpg"
-            />
-          </a>
-        </div>
+       
+       
         <hr className="my-5 w-11/12 border-t border-gray-300" />
         <div className="flex space-x-4">
           <Link href={`/${lng}/second-page`}>
