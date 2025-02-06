@@ -5,7 +5,6 @@ import { useTranslation } from '../i18n'
 import Image from 'next/image'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import { CountdownFlipper } from './components/countdown-flipper'
 import CountdownClock from "./components/CountdownClock"
 
 export default async function Page({ params }: {
