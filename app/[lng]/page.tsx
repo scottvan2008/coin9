@@ -6,7 +6,7 @@ import { useTranslation } from '../i18n'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { CountdownTimer } from './components/CountdownTimer'
-import { InfoSection } from "./components/InfoSection"
+// import { InfoSection } from "./components/InfoSection"
 import { BitcoinStats } from "./components/BitcoinStats"
 import MultiLanguageComponent from './components/MultiLanguageComponent'
 
@@ -24,12 +24,13 @@ export default async function Page({ params }: {
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
         <div className="text-center mb-12">
 
-        <MultiLanguageComponent lng={lng} />
+        
 
 
           <CountdownTimer />
         </div>
-        <InfoSection />
+        <MultiLanguageComponent lng={lng} />
+        {/* <InfoSection /> */}
         <BitcoinStats />
         <hr className="my-5 w-11/12 border-t border-gray-300" />
         <div className="flex space-x-4">
