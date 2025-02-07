@@ -29,9 +29,7 @@ export default async function Page({ params }: {
 
           <CountdownTimer />
         </div>
-        <MultiLanguageComponent lng={lng} />
-        {/* <InfoSection /> */}
-        <BitcoinStats />
+
         <hr className="my-5 w-11/12 border-t border-gray-300" />
         <div className="flex space-x-4">
           <Link href={`/${lng}/second-page`}>
@@ -45,6 +43,12 @@ export default async function Page({ params }: {
             </button>
           </Link>
         </div>
+
+        
+        <MultiLanguageComponent lng={lng} />
+        {/* <InfoSection /> */}
+        <BitcoinStats />
+        
       </main>
       <Footer />
     </>
